@@ -1,0 +1,20 @@
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Indtast højde: ");
+        double højde = double.Parse(Console.ReadLine());
+
+        Console.Write("Indtast grundlinje: ");
+        double grundlinje = double.Parse(Console.ReadLine());
+
+        double hypotenuse = Math.Sqrt((højde * højde) + (grundlinje * grundlinje));
+        double omkreds = højde + grundlinje + hypotenuse;
+
+        Console.WriteLine("Hypotenuse er: "+ hypotenuse);
+        Console.WriteLine("Omkredsen af trekanten er: "+ omkreds);
+
+        // Vent på brugerinput for at afslutte programmet
+        Console.ReadKey();
+    }
+}
