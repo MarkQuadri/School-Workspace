@@ -1,0 +1,21 @@
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        string kurs, konverteringsfaktoren; // Temperature
+        double kroner, frysepunkt, temperature; // Frysepunkt
+
+        Console.Write("Indtast temperaturen: ");
+        konverteringsfaktoren = Console.ReadLine();
+        temperature = double.Parse(konverteringsfaktoren);
+        Console.Write("Indtast frysepunktet: "); // Besked
+
+        kurs = Console.ReadLine();
+        frysepunkt = double.Parse(kurs);
+
+        kroner = (temperature - frysepunkt) * 0.56; // Omregner
+        Console.WriteLine("Når temperaturen er {2:N2F}, og frysepunket er {0:N1} får du {1:N2} som Celsius ", frysepunkt, kroner, temperature);
+
+        Console.ReadKey(); 
+    }
+}
