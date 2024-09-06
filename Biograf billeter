@@ -1,0 +1,27 @@
+    private static void Main(string[] args)
+    {
+        // Bed brugeren om at indtaste deres alder
+        Console.Write("Indtast din alder: ");
+        double alder = double.Parse(Console.ReadLine());
+
+        // Kontrollér alder og udregn billetpris
+        if (alder < 18)
+        {
+            // Billetpris for personer under 18 år
+            Console.WriteLine("Billetprisen er 45 DKK.");
+        }
+        else if (alder >= 18 && alder <= 65)
+        {
+            // Billetpris for personer mellem 18 og 65 år
+            Console.WriteLine("Billetprisen er 75 DKK.");
+        }
+        else if (alder > 65)
+        {
+            // Billetpris for personer over 65 år
+            Console.WriteLine("Billetprisen er 35 DKK.");
+        }
+
+        // Vent på brugerinput for at afslutte programmet
+        Console.ReadLine();
+    }
+}
