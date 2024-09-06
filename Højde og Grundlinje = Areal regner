@@ -1,0 +1,21 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string kurs, højde; // Højde
+        double kroner, højde1, euro1; // Grundlinje
+
+        Console.Write("Indtast trekantet højde: ");
+        højde = Console.ReadLine();
+        euro1 = double.Parse(højde);
+        Console.Write("Indtast trekantet grundlinje: "); // Besked
+
+        kurs = Console.ReadLine();
+        højde1 = double.Parse(kurs);
+
+        kroner = euro1 * højde1 * 0.5; // Omregner
+        Console.WriteLine("Når højden er {2:N2}, og grundlinjen er {0:N1} får du {1:N2} som areal", højde1, kroner, euro1);
+
+        Console.ReadKey(); 
+    }
+}
