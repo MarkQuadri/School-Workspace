@@ -1,0 +1,15 @@
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Er du medlem af vores forening: ");
+        string svar = Console.ReadLine();
+
+        if (svar == "ja")
+            Console.WriteLine("Du får 10% rabat! ");
+
+        else Console.WriteLine("Hvis du ikke er medlem kan du ikke få rabat: ");
+
+        Console.ReadLine();
+    }
+}
