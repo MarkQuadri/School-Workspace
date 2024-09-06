@@ -1,0 +1,22 @@
+using System;
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        // Indtast radius
+        Console.Write("Indtast radius af cirklen: ");
+        double radius = double.Parse(Console.ReadLine());
+
+        // Beregn omkredsen og arealet
+        double omkreds = 2 * Math.PI * radius;
+        double areal = Math.PI * Math.Pow(radius, 2);
+
+        // Udskriv resultaterne
+        Console.WriteLine($"Omkredsen af cirklen er: {omkreds}");
+        Console.WriteLine($"Arealet af cirklen er: {areal}");
+
+        // Vent på brugerens input, før programmet afsluttes
+        Console.ReadKey();
+    }
+}
