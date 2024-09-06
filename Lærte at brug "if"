@@ -1,0 +1,22 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Indtast dit alder: ");
+        double tal = double.Parse(Console.ReadLine());
+
+        if (tal < 18)
+        {
+            Console.WriteLine("Du er ikke 18 eller over ");
+            Console.ReadLine();
+        }
+
+        {
+            if (tal >=18) 
+        Console.WriteLine("Velkommen ");
+        Console.ReadLine();
+        }
+
+        
+    }
+}
