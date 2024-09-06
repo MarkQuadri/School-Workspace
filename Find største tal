@@ -1,0 +1,21 @@
+internal class Program
+{
+        static void Main(string[] args)
+    {
+        Console.Write("Indtast tal: ");
+        double tal = double.Parse(Console.ReadLine());
+
+        Console.Write("Indtast andet tal: ");
+        double tal1 = double.Parse(Console.ReadLine());
+
+        {
+            if (tal > tal1)
+                Console.WriteLine("Det største tal er: "+tal);
+        
+            else
+                Console.WriteLine("Det største tal er: "+tal1);
+
+            Console.ReadLine();
+        }
+    }
+}
