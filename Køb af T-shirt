@@ -1,0 +1,25 @@
+    private static void Main(string[] args)
+    {
+        Console.Write("Skal du have Small T shirt eller Medium T Shirts: ");
+        string type = Console.ReadLine();
+
+        Console.Write("Hvor mange vil du købe: ");
+        int quantity = int.Parse(Console.ReadLine());
+
+        int small = 120;
+        int medium = 160;
+     
+            if (type == "small")
+            { 
+                Console.WriteLine("Betal: "+small * quantity);
+            }
+
+        if (type == "medium")
+
+        {
+            Console.Write("Betal: " + medium * quantity);
+        }
+
+    Console.ReadLine();          
+    }
+}
