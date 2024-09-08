@@ -1,0 +1,29 @@
+    private static void Main(string[] args)
+    {
+        Console.Write("Indtast værelsetype: ");
+        string type = Console.ReadLine();
+
+        int Enkeltværelse = 765;
+        int Dobbeltværelse = 980;
+        int Familieværelse = 1250;
+
+        double euro = 0.13;
+
+        if (type == "Enkeltværelse")
+        {
+            Console.WriteLine("Betal: "+ Enkeltværelse);
+        Console.WriteLine("Amount in Euro: "+ Enkeltværelse * euro);
+        }
+        if (type == "Dobbeltværelse")
+            {
+                Console.WriteLine("Betal: "+ Dobbeltværelse);
+        Console.WriteLine("Amount in Euro: " + Dobbeltværelse * euro);
+        }
+        if (type == "Familieværelse")
+                {
+                    Console.WriteLine("Betal: "+ Familieværelse);
+        Console.WriteLine("Amount in Euro: " + Familieværelse * euro);
+        }
+        Console.ReadLine();
+    }
+}
