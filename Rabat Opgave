@@ -1,0 +1,22 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+            Console.Write("Indtast beløb: ");
+            double beløb = double.Parse(Console.ReadLine());
+
+            double rabatcondition = 1000;
+            double rabat = 0.95;
+
+            if (beløb > rabatcondition)
+            {
+                Console.WriteLine("Samlet beløb: " + beløb * rabat);
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Samlet beløb: " + beløb);
+                Console.ReadLine();
+            }
+    }
+}
