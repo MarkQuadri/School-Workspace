@@ -2,7 +2,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        while (true)
+        while (true) // loop start
         {
             string correctname = "Mark";
             string correctpassword = "Dth47pur";
@@ -17,7 +17,7 @@ internal class Program
             {
                 Console.Write("Korrekt, her er systemet: ");
                 Console.ReadLine();
-                break;
+                break; // loop end
             }
             else
             {
