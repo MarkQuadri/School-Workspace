@@ -1,0 +1,30 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        while (true)
+        {
+            string correctkey = "MQ";
+            string correctgoat = "Ronaldo";
+
+            Console.Write("Write name: ");
+            string key = Console.ReadLine();
+
+            Console.Write("Who's the goat: ");
+            string goat = Console.ReadLine();
+        
+            if (key == correctkey && goat == correctgoat)
+            {
+                Console.WriteLine("The debate is over");
+                Console.ReadLine();
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Forkert, prøv igen: ");
+                Console.ReadLine();
+                Console.Clear();
+            }
+        }
+    }
+}
