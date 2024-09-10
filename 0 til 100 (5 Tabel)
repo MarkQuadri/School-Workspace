@@ -1,0 +1,11 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        for (int i = 0; i <= 20; i++) // 1 til 100 Tabel
+        {
+            Console.Write(" " + i*5);
+        }
+        Console.ReadLine();
+    }
+}
