@@ -1,0 +1,60 @@
+using System;
+using System.Globalization;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int totalPrice = 0;  // Variabel til at holde styr på den samlede pris
+        
+        do
+        {
+            Console.Clear();
+            Console.WriteLine("Velkommen til drikkevarebestillingssystemet!");
+            Console.WriteLine("Alle 2L drikkevarer = 20kr");
+            Console.WriteLine("1. Cola");
+            Console.WriteLine("2. Fanta");
+            Console.WriteLine("3. Sprite");
+            Console.WriteLine("4. Pepsi");
+            Console.WriteLine("5. Mountain Dew");
+            Console.WriteLine("9. Afslut og se samlet pris");
+            
+            Console.Write("Vælg en drink ved at taste 1, 2, 3, 4 eller 5 (9 for at afslutte): ");
+            string tast = Console.ReadLine();
+            
+            int pricePerDrink = 20;  // Prisen pr. drink
+            int quantity;  // Antal drinks brugeren ønsker
+            
+            switch (tast)
+            {
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                    Console.Write("Indtast mængde: ");
+                    if (int.TryParse(Console.ReadLine(), out quantity))
+                    {
+                        totalPrice += pricePerDrink * quantity;  // Tilføj til samlet pris
+                        Console.WriteLine("Pris for valgte drinks: " + pricePerDrink * quantity + "kr");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ugyldig mængde indtastet. Prøv igen.");
+                    }
+                    break;
+
+                case "9":
+                    // Vis den samlede pris og afslut programmet
+                    Console.WriteLine("Samlet pris for alle valgte drinks: " + totalPrice + "kr");
+                    Console.ReadKey();  // Vent på, at brugeren trykker en tast
+                    return;
+
+                default:
+                    Console.WriteLine("Ugyldigt valg, prøv igen.");
+                    break;
+            }
+
+        } while (true);
+    }
+}
