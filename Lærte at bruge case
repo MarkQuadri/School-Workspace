@@ -1,0 +1,29 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string key;
+        Console.Write("Type 1, 2 or 3: ");
+        key = Console.ReadLine();
+
+        switch (key) 
+        {
+                case "1":
+                Console.WriteLine("Du har trykket på 1 tast return");
+                break;
+                
+                case "2":
+                Console.WriteLine("Du har trykket på 2 tast return");
+                break;
+
+                case "3":
+                Console.WriteLine("Du har trykket på 3 tast return");
+                break;
+
+                default:
+                Console.WriteLine("Du har ikke tastet noget");
+                break;
+        }
+
+    }   
+}
