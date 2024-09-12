@@ -1,0 +1,15 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Random Randomóbj = new Random();
+        int øjne;
+        do
+        {
+            øjne = Randomóbj.Next(1, 7);
+            Console.Write("Terning viste: {0}", øjne);
+        }
+        while (øjne > 6);
+        Console.ReadKey();
+    }
+}
