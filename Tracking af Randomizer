@@ -1,0 +1,25 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Random number = new Random();
+        int counter;
+        int totalattempts = 0;
+        string results = " ";
+
+        do
+        {
+            totalattempts++;
+            counter = number.Next(1, 6);
+            results += counter + " ";
+            Console.WriteLine("Du fik: {0}", counter);
+            Console.ReadKey();
+        }
+        
+        while (counter != 5);
+        Console.WriteLine("Du har fået:"+ results);
+        Console.WriteLine("Antal forsøg: " + totalattempts);
+        Console.ReadLine();
+        
+    }
+} 
