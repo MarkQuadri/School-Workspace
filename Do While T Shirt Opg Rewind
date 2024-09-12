@@ -1,0 +1,43 @@
+using System.Diagnostics;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int tal = 0;
+        do
+        {
+            Console.Write("Skal du have Small T shirt eller Medium T Shirt: ");
+            string type = Console.ReadLine().ToLower();  // Handle case sensitivity
+
+            Console.Write("Hvor mange vil du købe: ");
+            int quantity = int.Parse(Console.ReadLine());
+
+            int small = 120;
+            int medium = 160;
+
+            if (type == "small")
+            {
+                Console.WriteLine("Betal: " + small * quantity);
+            }
+            else if (type == "medium")
+            {
+                Console.WriteLine("Betal: " + medium * quantity);
+            }
+            else
+            {
+                Console.WriteLine("Ugyldig input, prøv igen.");
+            }
+
+            Console.Write("Vil du købe igen? (ja/nej): ");  // Ask if the user wants to continue
+            string continueShopping = Console.ReadLine().ToLower();
+            if (continueShopping != "ja")
+            {
+                break;  // Exit the loop if the user doesn't want to continue
+            }
+            
+        } while (true);
+
+        Console.WriteLine("Tak for dit køb!");  // Final message when exiting the loop
+    }
+}
