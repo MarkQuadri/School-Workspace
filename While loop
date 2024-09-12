@@ -1,0 +1,22 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        {
+            int count = 5;
+            bool shouldContinue = true;
+            while (shouldContinue)
+            {
+                Console.Write("Type your input: "+ count);
+                count--;
+                Console.ReadLine();
+
+                if (count == 0)
+                {
+                    shouldContinue = false;
+                    Console.ReadLine ();
+                }
+            }
+        }
+    }
+}
