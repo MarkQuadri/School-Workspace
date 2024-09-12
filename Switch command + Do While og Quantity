@@ -1,0 +1,53 @@
+using System.Globalization;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("Alle 2L = 20kr");
+            Console.WriteLine("9 for at afslutte: ");
+            Console.Write("Type 1, 2, 3, 4 eller 5: ");
+
+            string tast = Console.ReadLine();
+            int amount = 20;
+            int quantity;
+
+
+            switch (tast)
+            {
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+
+                    Console.Write("Indtast quantity: ");
+                    if (int.TryParse(Console.ReadLine(), out quantity))
+                    {
+                        Console.Write("Total pris: " + (amount * quantity));
+                        Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid quantity entered: ");
+                        Console.ReadLine();
+                    }
+                    break;
+
+                case "9":
+                    Console.WriteLine("Farvel og tak");
+                    Console.ReadKey();
+                    return;
+
+                    default:
+                    Console.WriteLine("Du har ikke tastet noget");
+                    Console.ReadKey();
+                    Console.Clear();
+                    break;
+            }
+        }
+    }
+}
