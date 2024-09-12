@@ -1,0 +1,46 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string tast;
+
+        while (true)
+        {
+            Console.WriteLine("Type 1, 2 or 3: ");
+            Console.WriteLine("9 for at afslutte: ");
+            tast = Console.ReadLine();
+
+            switch (tast)
+            {
+                case "1":
+                    Console.WriteLine("Du har trykket på 1 tast return");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+
+                case "2":
+                    Console.WriteLine("Du har trykket på 2 tast return");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+
+                case "3":
+                    Console.WriteLine("Du har trykket på 3 tast return");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+
+                default:
+                    Console.WriteLine("Du har ikke tastet noget");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+
+                case "9":
+                    Console.WriteLine("Farvel og tak");
+                    Console.ReadKey();
+                    return;
+            }
+        }
+    }
+}
