@@ -1,0 +1,28 @@
+    private static void Main(string[] args)
+    {
+        string correctby = "Faaborg";
+        int totalattempts = 0;
+        
+        while (true)
+        {
+            totalattempts++;
+            Console.Write("Hvilken by i Fyn starter med F: ");
+            string UserInput = Console.ReadLine();
+
+            if (UserInput == correctby)
+            {
+                Console.WriteLine("Korrekt!");
+                Console.WriteLine("Forsøg: " + totalattempts);
+                Console.ReadLine();
+                Console.Clear();
+                break;
+            }
+            else
+            {
+                Console.Write("Forkert, prøv igen: ");
+                Console.ReadLine();
+                Console.Clear();
+            }
+        }
+    }
+}
