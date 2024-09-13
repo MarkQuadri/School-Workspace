@@ -1,0 +1,52 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string tast;
+        string amount;
+        string input;
+
+        int quantity;
+        int Fanta = 15;
+        int Cola = 20;
+        int Faxe = 12;
+
+        Console.WriteLine("1 - 3 = Drikkevare: ");
+        Console.WriteLine("4 = Exit: ");
+        tast = Console.ReadLine();
+
+        while (true)
+        {
+            if (tast == "case") ;
+            {
+                switch (tast)
+                {
+
+                    case "1":
+                        Console.Write("Indtast amount: ");
+                        if (int.TryParse(Console.ReadLine(), out quantity))
+                            Console.WriteLine("Beløb for Fanta'er: " + Fanta * quantity);
+                        Console.ReadLine();
+                        break;
+
+                    case "2":
+                        Console.Write("Indtast amount: ");
+                        if (int.TryParse(Console.ReadLine(), out quantity))
+                            Console.WriteLine("Beløb for Cola'er: " + Cola * quantity);
+                        Console.ReadLine();
+                        break;
+
+                    case "3":
+                        Console.Write("Indtast amount: ");
+                        if (int.TryParse(Console.ReadLine(), out quantity))
+                            Console.WriteLine("Beløb for Faxe Kondi'er: " + Faxe * quantity);
+                        Console.ReadLine();
+                        break;
+
+                    case "4":
+                        return;
+                }
+            }
+        }
+    }
+}
