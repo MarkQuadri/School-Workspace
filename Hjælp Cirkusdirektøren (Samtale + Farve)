@@ -1,0 +1,111 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string tast;
+        string amount;
+        string input;
+
+        Random reward = new Random();
+
+        bool validÍnput = false;
+
+        while (!validÍnput)
+        {
+            Console.WriteLine("1 = 190 (Blå): ");
+            Console.WriteLine("2 = 250 (Rød): ");
+            Console.WriteLine("3 = 280 (Gul): ");
+            Console.WriteLine("4 = 320 (Pink): ");
+            Console.WriteLine("5 = Exit: ");
+            tast = Console.ReadLine();
+
+                switch (tast)
+                {
+                    case "1":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.Write("Indtast alder: ");
+                        Console.ReadLine();
+                        Console.Write("Indtast Navn og Efternavn: ");
+                        Console.ReadLine();
+                        Console.WriteLine("Scan kort eller betal 190kr: ");
+                        Console.ReadLine();
+
+                        int random = reward.Next(6);
+                        Console.WriteLine("Du fik:");
+                        for (int i = 0; i < 1; i++)
+                        {
+                        int randomNumber = reward.Next(1, 7); // Generate random number between 1 and 6
+                        Console.WriteLine(randomNumber);
+                        }
+                        Console.ReadLine();
+                        break;
+
+                case "2":
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write("Indtast alder: ");
+                        Console.ReadLine();
+                        Console.Write("Indtast Navn og Efternavn: ");
+                        Console.ReadLine();
+                        Console.WriteLine("Scan kort eller betal 250: ");
+                        int random1; Console.ReadLine();
+
+                        int randomm = reward.Next(1, 7);
+                        Console.WriteLine("Du fik:");
+                        for (int i = 0; i < 2; i++)
+                        {
+                        int randomNumber = reward.Next(1, 7); // Generate random number between 1 and 6
+                        Console.WriteLine(randomNumber);
+                        }
+                        Console.ReadLine();
+                        break;
+
+                case "3":
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("Indtast alder: ");
+                        Console.ReadLine();
+                        Console.Write("Indtast Navn og Efternavn: ");
+                        Console.ReadLine();
+                        Console.WriteLine("Scan kort eller betal 280kr: ");
+                        Console.ReadLine();
+
+                        int randommm = reward.Next(1, 7);
+                        Console.WriteLine("Du fik:");
+                        for (int i = 0; i < 3; i++)
+                        {
+                        int randomNumber = reward.Next(1, 7); // Generate random number between 1 and 6
+                        Console.WriteLine(randomNumber);
+                        }
+                        Console.ReadLine();
+                        break;
+
+                case "4":
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.Write("Indtast alder: ");
+                        Console.ReadLine();
+                        Console.Write("Indtast Navn og Efternavn: ");
+                        Console.ReadLine();
+                        Console.WriteLine("Scan kort eller betal 320kr: ");
+                        Console.ReadLine();
+
+                        int randommmm = reward.Next(1, 7);
+                        Console.WriteLine("Du fik:");
+                        for (int i = 0; i < 4; i++)
+                        {
+                        int randomNumber = reward.Next(1, 7); // Generate random number between 1 and 6
+                        Console.WriteLine(randomNumber);
+                        }
+                        Console.ReadLine();
+                        break;
+
+                case "5":
+                    return;
+
+                default:
+                        Console.WriteLine("Du har ikke indtastet noget: ");
+                        Console.ReadLine();
+                        Console.Clear();
+                        break;
+                }
+            }
+        }
+    }
