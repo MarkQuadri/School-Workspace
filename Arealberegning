@@ -1,0 +1,76 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string tast;
+        string amount;
+        string input;
+
+        int quantity;
+        int Fanta = 15;
+        int Cola = 20;
+        int Faxe = 12;
+
+        while (true)
+        {
+            Console.WriteLine("1 = Rektangel: ");
+            Console.WriteLine("2 = Cirkel: ");
+            Console.WriteLine("3 = Retvinklet trekant: ");
+            Console.WriteLine("4 = Exit: ");
+            Console.Write("Indtast command: ");
+            tast = Console.ReadLine();
+
+            if (true) ;
+            {
+                switch (tast)
+                {
+
+                    case "1":
+                        Console.Write("Indtast længden: ");
+                        double længde = double.Parse(Console.ReadLine());
+                        Console.Write("Indtast højden: ");
+                        double bredde = double.Parse(Console.ReadLine());
+
+                        double areal = længde * bredde;
+                        Console.WriteLine("Arealet er: "+areal);
+                        Console.ReadLine();
+                        Console.Clear();
+                        break;
+
+                    case "2":
+                        Console.Write("Indtast længden: ");
+                        double radius = double.Parse(Console.ReadLine());
+
+                        double areal2 = radius * radius * Math.PI;
+                        Console.WriteLine("Arealet er: "+areal2);
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        break;
+
+                    case "3":
+                        Console.Write("Indtast længden: ");
+                        double grundlinje = double.Parse(Console.ReadLine());
+                        Console.Write("Indtast højden: ");
+                        double højde = double.Parse(Console.ReadLine());
+
+                        double areal3 = højde * grundlinje * 0.5;
+                        Console.WriteLine("Arealet er: " + areal3);
+
+                        Console.ReadLine();
+                        Console.Clear();
+                        break;
+
+                    default:
+                    Console.WriteLine("Du har ikke indtastet noget: ");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+
+                    case "4":
+                        return;
+                }
+            }
+        }
+    }
+}
