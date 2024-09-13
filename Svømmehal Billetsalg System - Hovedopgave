@@ -1,0 +1,97 @@
+namespace Opgave_46
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int enkelbillet_voksen = 42;
+            int enkelbillet_børn_under_7 = 0;
+            int enkelbillet_børn_7_15_skoleferie = 15;
+            int enkelbillet_børn_7_15_normal = 10;
+            int enkelbillet_special = 23;
+
+            int turskort10_voksen = 330;
+            int turskort10_special = 135;
+            int turskort10_børn7_5 = 175;
+            int quantity; // Gange = Amount
+
+            Console.ForegroundColor = ConsoleColor.Yellow; // Ændre farve for at highlight bedre
+            Console.WriteLine("Velkommen til Ballerup Svømmehal! ");
+            Console.ForegroundColor= ConsoleColor.White;
+            Console.Write("\r\nTryk (Enter) for at se Priser ");
+            string type = Console.ReadLine(); // Lægger type så man kan vælge mellem hvilken ordre
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Enkeltbilletter");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\r\nVoksne 42 kr = 1\r\n\r\nPensionister, efterlønsmodtagere, arbejdsledige, borgere på ledighedsydelse, dagpengemodtagere og studerende \r\n\r\n(dokumentation påkrævet) 23 kr = 2\r\n\r\nBørn (under 7 år i følgeskab med en voksen) Gratis = 3\r\n\r\nBørn (7-15 år) 15 kr = 4\r\n\r\nSkoleferiebillet Børn (7-15 år) sommer/efterår/vinter 10 kr = 5");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\r\n10-turskort");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\r\nVoksne 330 kr = 6\r\n\r\nPensionister, efterlønsmodtagere, arbejdsledige, borgere på ledighedsydelse,\r\ndagpengemodtagere og studerende (dokumentation påkrævet) 175 kr = 7\r\n\r\nBørn (7-15 år) 135 kr = 8\r\n");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("\r\n\r\n\r\n\r\n\r\n\r\nIndtast type: ");
+            type = Console.ReadLine(); // Lægger type her så systemet forstår og den beder om konfirmation
+            Console.Clear(); // Clear for at fjerne alle game beskeder
+
+            switch (type) // Start af simulotion ;)
+            {
+                case "1":
+            
+                Console.Write("Indtast amount: ");
+                quantity = int.Parse(Console.ReadLine());
+                Console.Write("\r\nBeløb er: " + enkelbillet_voksen * quantity);
+                    break;
+
+                case "2":
+
+                    Console.Write("Indtast amount: ");
+                    quantity = int.Parse(Console.ReadLine());
+                    Console.Write("\r\nBeløb er: " + enkelbillet_børn_under_7 * quantity);
+                    break;
+
+                case "3":
+
+                    Console.Write("Indtast amount: ");
+                    quantity = int.Parse(Console.ReadLine());
+                    Console.Write("\r\nBeløb er: " + enkelbillet_børn_7_15_skoleferie * quantity);
+                    break;
+
+                case "4":
+
+                    Console.Write("Indtast amount: ");
+                    quantity = int.Parse(Console.ReadLine());
+                    Console.Write("\r\nBeløb er: " + enkelbillet_børn_7_15_normal * quantity);
+                    break;
+
+                case "5":
+
+                    Console.Write("Indtast amount: ");
+                    quantity = int.Parse(Console.ReadLine());
+                    Console.Write("\r\nBeløb er: " + enkelbillet_special * quantity);
+                    break;
+
+                case "6":
+
+                    Console.Write("Indtast amount: ");
+                    quantity = int.Parse(Console.ReadLine());
+                    Console.Write("\r\nBeløb er: " + turskort10_voksen * quantity);
+                    break;
+
+                case "7":
+
+                    Console.Write("Indtast amount: ");
+                    quantity = int.Parse(Console.ReadLine());
+                    Console.Write("\r\nBeløb er: " + turskort10_special * quantity);
+                    break;
+
+                case "8":
+
+                    Console.Write("Indtast amount: ");
+                    quantity = int.Parse(Console.ReadLine());
+                    Console.Write("\r\nBeløb er: " + turskort10_børn7_5 * quantity);
+                    break;
+            }
+        }
+    }
+}
