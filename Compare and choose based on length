@@ -1,0 +1,32 @@
+namespace Opgave_47
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Indtast whatever: ");
+            string text1 = Console.ReadLine();
+
+            Console.Write("Indtast whatever: ");
+            string text2 = Console.ReadLine();
+
+            int result = string.Compare(text1, text2);
+
+            if (result > 0)
+            {
+                Console.WriteLine("" + text1);
+                Console.ReadLine();
+            }
+            else if (result < 0)
+            {
+                Console.WriteLine(""+ text2);
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Du har ikke indtastet noget");
+                Console.ReadLine();
+            }
+        }
+    }
+}
