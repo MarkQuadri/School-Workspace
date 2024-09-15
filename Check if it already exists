@@ -1,0 +1,41 @@
+namespace Opgave_50
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Indtast text: ");
+            string userInput = Console.ReadLine();
+            Console.Clear();
+
+            Console.Write("Indtast text: ");
+            string userInput2 = Console.ReadLine();
+            Console.Clear();
+
+            int result = string.Compare(userInput, userInput2);
+
+            if (result == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("Findes allerede");
+                Console.ForegroundColor= ConsoleColor.White;
+                Console.ReadLine();
+            }
+            else if (result > 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(""+userInput2);
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(""+ userInput);
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.ReadLine();
+            }
+        }
+    }
+}
