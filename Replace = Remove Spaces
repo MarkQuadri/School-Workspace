@@ -1,0 +1,15 @@
+namespace Opgave_48
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Indtast whatever: ");
+            string userInput = Console.ReadLine();
+
+            string result = userInput.Replace(" ", "");
+            Console.Write(result);
+            Console.ReadLine();
+        }
+    }
+}
